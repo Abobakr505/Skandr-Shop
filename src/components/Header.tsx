@@ -143,7 +143,20 @@ export default function Header({ cartItemsCount, onCartClick }: HeaderProps) {
                 >
                   <X className="w-8 h-8" />
                 </button>
-
+                          {/* Logo */}
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="flex items-center gap-3 cursor-pointer"
+            onClick={() => scrollToSection('home')}
+          >
+            <div className="w-12 h-12 bg-[#004f49] rounded-md flex items-center justify-center">
+              <img src="/about.jpg" alt="شعار إسكندر" />
+            </div>
+            <div className="text-right">
+              <h1 className="text-2xl font-bold text-[#004f49]">إسكندر</h1>
+              <p className="text-xs text-gray-600">كبدة إسكندراني أصلية</p>
+            </div>
+          </motion.div>
                 <motion.nav
                   variants={containerVariants}
                   initial="hidden"
