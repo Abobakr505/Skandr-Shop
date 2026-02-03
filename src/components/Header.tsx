@@ -111,7 +111,7 @@ export default function Header({ cartItemsCount, onCartClick }: HeaderProps) {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden p-2"
             >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6 " />}
             </button>
           </div>
         </div>
