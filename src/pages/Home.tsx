@@ -15,6 +15,7 @@ import CheckoutModal from '../components/CheckoutModal';
 import AboutSection from '../components/AboutSection';
 import ContactSection from '../components/ContactSection';
 import { Link, useLocation } from 'react-router-dom';
+import { WhatsAppButton } from '../components/WhatsAppButton';
 
 function Home() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -216,7 +217,7 @@ function Home() {
       </main>
 
       <Footer />
-
+      <WhatsAppButton/>       
       <Cart
         isOpen={isCartOpen}
         onClose={() => setIsCartOpen(false)}

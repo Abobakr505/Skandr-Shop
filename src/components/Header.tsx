@@ -80,7 +80,7 @@ export default function Header({ cartItemsCount, onCartClick }: HeaderProps) {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-700 hover:text-[#004f49] transition-colors font-medium relative pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-[#004f49] after:w-0 hover:after:w-full after:transition-all after:duration-300"
+                className="text-gray-700 text-xl hover:text-[#004f49] transition-colors font-bold relative pb-1 after:content-[''] after:absolute  after:bottom-0 after:left-0 after:h-1 after:bg-[#004f49] after:w-0 hover:after:w-full after:transition-all after:duration-300"
               >
                 {item.label}
               </button>
