@@ -116,7 +116,7 @@ export default function ProductDetails() {
     <>
       <Header cartItemsCount={cartItemsCount} onCartClick={() => setIsCartOpen(true)} />
 
-      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-8 px-4 sm:px-6 lg:px-8" dir="rtl">
+      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-24 px-4 sm:px-6 " dir="rtl">
         {/* Breadcrumbs – أصغر وأفضل على الموبايل */}
         <div className="max-w-7xl mx-auto mb-8">
           <nav className="flex flex-wrap items-center gap-2 text-sm text-gray-600 bg-white/80 backdrop-blur-sm rounded-2xl px-4 py-3 shadow-sm">
@@ -283,7 +283,6 @@ export default function ProductDetails() {
                 >
                   {tab === 'description' && 'الوصف'}
                   {tab === 'shipping' && 'الشحن والإرجاع'}
-                  {tab === 'reviews' && 'التقييمات (124)'}
                   {activeTab === tab && (
                     <motion.div
                       layoutId="mobileActiveTab"
@@ -336,30 +335,7 @@ export default function ProductDetails() {
                 </div>
               )}
 
-              {activeTab === 'reviews' && (
-                <div className="space-y-10">
-                  <div className="text-center py-10 bg-gray-50 rounded-2xl">
-                    <div className="text-5xl font-bold text-[#004f49]">4.8</div>
-                    <div className="flex justify-center my-4 text-yellow-500">
-                      {[1,2,3,4,5].map(i => <Star key={i} className="w-8 h-8 fill-current" />)}
-                    </div>
-                    <p className="text-lg">بناءً على 124 تقييم</p>
-                  </div>
-                  <div className="space-y-6">
-                    {['رائع جداً، جودة ممتازة!', 'توصيل سريع ومنتج أصلي'].map((review, i) => (
-                      <div key={i} className="bg-gray-50 p-6 rounded-2xl">
-                        <div className="flex items-center gap-3 mb-3">
-                          <div className="flex text-yellow-500">
-                            {[1,2,3,4,5].map(j => <Star key={j} className="w-5 h-5 fill-current" />)}
-                          </div>
-                          <span className="font-semibold text-sm">عميل سعيد</span>
-                        </div>
-                        <p>{review}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
+              
             </motion.div>
           </div>
 
